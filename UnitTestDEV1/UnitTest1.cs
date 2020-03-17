@@ -1,40 +1,36 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Task_DEV1;
+using System;
 
 namespace UnitTestDEV1
 {
     [TestClass]
-    public class UnitTest1
+    public class FindMaxDifferentSymbolsInSequenceTest
     {
         [TestMethod]
-        public void CheckForCurrentWorkMaxDifferentElements()
+        [DataRow("aabcdefghh", 8)] // Check For Current Work Return Length Of Max Different Symbols
+        [DataRow("A", 1)] // Check For One Element String Return Length Of Max Different Symbols
+        public void CheckForCurrentWorkReturnLengthOfMaxDifferentSymbols(string exampleString, int CheckValueForCurrentWork)
         {
-            int CheckValueForCurrentWork = 8;
-            string exampleString = "aabcdefghh";
-            Assert.AreEqual(SequenceOfElements.MaxDifferentElements(exampleString), CheckValueForCurrentWork);
+            int CheckMethodForCurrentWork = FindMaxDifferentSymbolsInSequence.ReturnLengthOfMaxDifferentSymbols(exampleString);
+            Assert.AreEqual(CheckMethodForCurrentWork, CheckValueForCurrentWork);
         }
-        [TestMethod]
-        public void CheckForEmptyStringMaxDifferentElements()
-        {
-            int CheckValueForEmptyString = 0;
-            string ExampleEmptyString = "";
-            Assert.AreEqual(SequenceOfElements.MaxDifferentElements(ExampleEmptyString), CheckValueForEmptyString);
-        }
-        [TestMethod]
-        public void CheckForOneElementStringMaxDifferentElements()
-        {
-            int CheckValueForOneElementString = 1;
-            string ExampleOneElementString = "A";
-            Assert.AreEqual(SequenceOfElements.MaxDifferentElements(ExampleOneElementString), CheckValueForOneElementString);
 
-        }
         [TestMethod]
-        public void CheckForNullStringMaxDifferentElements()
+        [DataRow(0)]
+        public void CheckForEmptyStringReturnLengthOfMaxDifferentSymbols(int CheckValueForEmptyString)
         {
-            int CheckValueForNullString = 0;
+            string ExampleEmptyString = string.Empty;
+            int CheckMethodForEmptyString = FindMaxDifferentSymbolsInSequence.ReturnLengthOfMaxDifferentSymbols(ExampleEmptyString);
+            Assert.AreEqual(CheckMethodForEmptyString, CheckValueForEmptyString);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(NullReferenceException), "Null string is entered")]
+        public void CheckForNullStringReturnLengthOfMaxDifferentSymbols()
+        {
             string ExampleNullString = null;
-            Assert.AreEqual(SequenceOfElements.MaxDifferentElements(ExampleNullString), CheckValueForNullString);
+            FindMaxDifferentSymbolsInSequence.ReturnLengthOfMaxDifferentSymbols(ExampleNullString);
 
         }
     }
