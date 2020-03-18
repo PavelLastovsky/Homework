@@ -41,7 +41,7 @@ namespace Task_DEV1_2
             ScaleOfNotation = Convert.ToInt32(ScaleOfNotationString);
         }
         /// <summary>
-        /// Convert Number from 2 to 20 scale of notation
+        /// Convert Number between 2 to 20 scale of notation
         /// </summary>
         /// <returns> string Number in new scale of notation </returns>
         public string ReturnNumberInAnotherScaleOfNotation()
@@ -61,7 +61,7 @@ namespace Task_DEV1_2
                 return NewNumber.ToString();
         }
         /// <summary>
-        /// Check our method for exceprions
+        /// Check method for exceprions
         /// </summary>
         private void CheckForNullString(string NumberString, string ScaleOfNotationString)
         {

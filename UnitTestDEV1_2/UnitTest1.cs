@@ -12,12 +12,12 @@ namespace UnitTestDEV1_2
         [DataRow("1DB", "475", "16")] // Check For Current Work Return Number for 16 Check scale of notations
         [DataRow("31", "25", "8")] // Check For Current Work Return Number for 8 Check scale of notations
         [DataRow("100", "9", "3")] // Check For Current Work Return Number for 3 Check scale of notations
-        [DataRow("22", "22", "10")] // Check For Current Work Return Number for 3 Check scale of notations
-        public void CheckForCurrentWorkReturnNumberInAnotherScaleOfNotation(string exampleString, string CheckNumber, string CheckScaleOfNotationString)
+        [DataRow("22", "22", "10")] // Check For Current Work Return Number for 10 Check scale of notations
+        public void CheckForCurrentWorkReturnNumberInAnotherScaleOfNotation(string ExampleStringInAnotherScaleOfNotation, string CheckNumber, string CheckScaleOfNotationString)
         {
             ConvertFromDeciminalNumberSystem Check = new ConvertFromDeciminalNumberSystem(CheckNumber, CheckScaleOfNotationString);
             string CheckMethodForCurrentWork = Check.ReturnNumberInAnotherScaleOfNotation();
-            Assert.AreEqual(CheckMethodForCurrentWork, exampleString);
+            Assert.AreEqual(CheckMethodForCurrentWork, ExampleStringInAnotherScaleOfNotation);
         }
 
         [TestMethod]
