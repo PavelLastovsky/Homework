@@ -16,7 +16,7 @@ namespace UnitTestDEV1_2
         public void CheckForCurrentWorkReturnNumberInAnotherScaleOfNotation(string ExampleStringInAnotherScaleOfNotation, string CheckNumber, string CheckScaleOfNotationString)
         {
             ConvertFromDeciminalNumberSystem Check = new ConvertFromDeciminalNumberSystem(CheckNumber, CheckScaleOfNotationString);
-            string CheckMethodForCurrentWork = Check.ReturnNumberInAnotherScaleOfNotation();
+            string CheckMethodForCurrentWork = Check.NumberInAnotherScaleOfNotation();
             Assert.AreEqual(CheckMethodForCurrentWork, ExampleStringInAnotherScaleOfNotation);
         }
 
@@ -27,7 +27,7 @@ namespace UnitTestDEV1_2
         public void CheckForArgumentOutOfRangeExceptionReturnNumberInAnotherScaleOfNotation(string CheckNumber, string CheckScaleOfNotationString)
         {
             ConvertFromDeciminalNumberSystem Check = new ConvertFromDeciminalNumberSystem(CheckNumber, CheckScaleOfNotationString);
-            Check.ReturnNumberInAnotherScaleOfNotation();
+            Check.NumberInAnotherScaleOfNotation();
         }
 
         [TestMethod]
@@ -35,7 +35,7 @@ namespace UnitTestDEV1_2
         public void CheckForNullReferenceExceptionReturnNumberInAnotherScaleOfNotation()        
         {
             ConvertFromDeciminalNumberSystem Check = null;
-            Check.ReturnNumberInAnotherScaleOfNotation();
+            Check.NumberInAnotherScaleOfNotation();
         }
 
         [TestMethod]
@@ -44,7 +44,7 @@ namespace UnitTestDEV1_2
         {
             string ExampleEmptyString = string.Empty;
             ConvertFromDeciminalNumberSystem Check = new ConvertFromDeciminalNumberSystem(ExampleEmptyString, ExampleEmptyString);
-            Check.ReturnNumberInAnotherScaleOfNotation();
+            Check.NumberInAnotherScaleOfNotation();
         }
 
     }

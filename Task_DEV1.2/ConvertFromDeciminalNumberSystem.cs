@@ -44,7 +44,7 @@ namespace Task_DEV1_2
         /// Convert Number between 2 to 20 scale of notation
         /// </summary>
         /// <returns> string Number in new scale of notation </returns>
-        public string ReturnNumberInAnotherScaleOfNotation()
+        public string NumberInAnotherScaleOfNotation()
         {
 
                 StringBuilder NewNumber = new StringBuilder();
