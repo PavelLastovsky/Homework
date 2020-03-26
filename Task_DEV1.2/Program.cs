@@ -8,8 +8,7 @@ namespace Task_DEV1_2
         {
             try
             {
-                Console.WriteLine("Enter Number and Scale of notation");
-                string NumberString = Console.ReadLine(), ScaleOfNotationString = Console.ReadLine();
+                string NumberString = args[0], ScaleOfNotationString = args[1];
                 ConvertFromDeciminalNumberSystem Convert = new ConvertFromDeciminalNumberSystem(NumberString, ScaleOfNotationString);
                 string Result = Convert.ReturnNumberInAnotherScaleOfNotation();
                 Console.WriteLine($"Your number: {Result}, in {ScaleOfNotationString} scale of notation");
