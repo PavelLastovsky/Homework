@@ -7,15 +7,19 @@ namespace task_DEV1._4
         float _pointX,
               _pointY,
               _pointZ;
+
+        /// <summary>
+        /// Coordinate constructor that creates point with 3 coordinates and return them
+        /// </summary>
+        /// <param name="_pointx"> coordinate x return float value </param>
+        /// <param name="_pointy"> coordinate y return float value </param>
+        /// <param name="_pointz"> coordinate z return float value </param>
         public Coordinate(float _pointx, float _pointy, float _pointz)
         {
             PointX = _pointx;
             PointY = _pointy;
             PointZ = _pointz;
         }
-        /// <summary>
-        /// 
-        /// </summary>
         public float PointX
         {
             get 
@@ -52,10 +56,12 @@ namespace task_DEV1._4
                 _pointZ = value;
             }
         }
-        public override string ToString()
-        {
-            return ($"Coordinate x:  {_pointX.ToString()}  Coordinate y:  {_pointY.ToString()}   Coordinate z:  {_pointZ.ToString()}");
-        }
+
+        /// <summary>
+        /// return distance between two Points as float
+        /// </summary>
+        /// <param name="A"> object of class Coordinate </param>
+        /// <returns></returns>
         public float GetDistance(Coordinate A)
         {
             return (float)(Math.Sqrt(Math.Pow(A.PointX - _pointX, 2) + Math.Pow(A.PointY - _pointY, 2) + Math.Pow(A.PointZ - _pointZ, 2)));

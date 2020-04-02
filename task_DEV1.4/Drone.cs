@@ -4,7 +4,12 @@ namespace task_DEV1._4
 {
     public class Drone : IFlyable
     {
-        const int MinDroneSpeed = 0, MaxDroneSpeed = 40, TimeChange = 10, TimeStop = 1, MinDroneDistance = 200, MaxDroneDistance = 1000;
+        /// <summary>
+        /// MinDroneSpeed, MaxDroneSpeed are measured in kilometers per hour
+        /// TimeChange, TimeStop are measured in hours
+        /// MinDroneDistance, MaxDroneDistance are measured in kilometers
+        /// </summary>
+        const int MinDroneSpeed = 0, MaxDroneSpeed = 40, TimeChange = 1/6, TimeStop = 1/60, MinDroneDistance = 200, MaxDroneDistance = 1000;
         float _speed;
         Coordinate CurrentPoint;
         public float Speed
