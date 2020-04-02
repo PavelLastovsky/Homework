@@ -14,7 +14,6 @@ namespace task_DEV1._4
         /// <param name="_pointx"> coordinate x return float value </param>
         /// <param name="_pointy"> coordinate y return float value </param>
         /// <param name="_pointz"> coordinate z return float value </param>
-      
         public Coordinate(float _pointx, float _pointy, float _pointz)
         {
             PointX = _pointx;
