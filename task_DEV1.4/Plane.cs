@@ -8,6 +8,7 @@ namespace task_DEV1._4
         /// MinPlaneSpeed, MaxPlaneSpeed, SpeedChange are measured in kilometers per hour
         /// DistanceChange, MinPlaneDistance, MaxPlaneDistance are measured in kilometers
         /// </summary>
+
         const int MinPlaneSpeed = 200, MaxPlaneSpeed = 3000, DistanceChange = 10, SpeedChange = 10, MinPlaneDistance = 10, MaxPlaneDistance = 6000;
         float _speed;
         Coordinate CurrentPoint;

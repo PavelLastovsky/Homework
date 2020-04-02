@@ -4,7 +4,7 @@ namespace task_DEV1._4
 {
     public class Bird : IFlyable
     {
-        const int MinBirdSpeed = 0, MaxBirdSpeed = 20; // bird speed measured in kilometers per hour
+        const int MinBirdSpeed = 0, MaxBirdSpeed = 20;   // bird speed measured in kilometers per hour
         float _speed;
         Coordinate CurrentPoint;
         public float Speed
