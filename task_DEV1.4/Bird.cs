@@ -20,10 +20,11 @@ namespace task_DEV1._4
                 _speed = value;
             }
         }
-        public Bird(Coordinate CurrentLocation, float _speed)
+        public Bird(Coordinate CurrentLocation)
         {
-            Speed = _speed;
             CurrentPoint = CurrentLocation;
+            Random rnd = new Random();
+            Speed = rnd.Next(MinBirdSpeed, MaxBirdSpeed);
         }
         public void FlyTo(Coordinate NewPoint)
         {
@@ -31,7 +32,7 @@ namespace task_DEV1._4
         }
         public float GetFlyTime(Coordinate destination)
         {
-            return CurrentPoint.GetDistance(destination) / _speed;
+            return CurrentPoint.GetDistance(destination) / Speed;
         }
         public void SpeedNotZeroCheck(float value)
         {

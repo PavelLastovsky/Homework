@@ -6,10 +6,11 @@ namespace task_DEV1._4
     {
         /// <summary>
         /// MinDroneSpeed, MaxDroneSpeed are measured in kilometers per hour
-        /// TimeChange, TimeStop are measured in hours
         /// MinDroneDistance, MaxDroneDistance are measured in kilometers
         /// </summary>
-        const int MinDroneSpeed = 0, MaxDroneSpeed = 40, TimeChange = 1/6, TimeStop = 1/60, MinDroneDistance = 200, MaxDroneDistance = 1000;
+        const int MinDroneSpeed = 0, MaxDroneSpeed = 40, MinDroneDistance = 200, MaxDroneDistance = 1000;
+        int TimeChange = Convert.ToInt32(TimeSpan.FromMinutes(10).TotalHours); // Convert our change time from minutes to hours
+        int TimeStop = Convert.ToInt32(TimeSpan.FromMinutes(1).TotalHours); // Convert our change time from minutes to hours
         float _speed;
         Coordinate CurrentPoint;
         public float Speed

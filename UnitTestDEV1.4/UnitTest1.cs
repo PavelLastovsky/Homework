@@ -17,6 +17,16 @@ namespace UnitTestDEV1._4
         {
             Coordinate NewPoint = new Coordinate(a, b, c);
         }
+
+        [TestMethod]
+        [DataRow(0)]
+        public void CoordinateConstructorArgumentCorrectWorkCheck(float a)
+        {
+            Coordinate FirstPoint = new Coordinate(1, 1, 1);
+            Coordinate SecondPoint = new Coordinate(1, 1, 1);
+            float CheckMetod = FirstPoint.GetDistance(SecondPoint);
+            Assert.AreEqual(CheckMetod, a);
+        }
     }
     [TestClass]
     public class BirdTest
@@ -28,8 +38,8 @@ namespace UnitTestDEV1._4
         public void BirdConstructorArgumentOutOfRangeExceptionCheck(float a)
         {
             Coordinate CurrentPoint = new Coordinate(15, 15, 15);
-            Bird NewPoint = new Bird(CurrentPoint, a);
-            float v = NewPoint.Speed;
+            Bird NewPoint = new Bird(CurrentPoint);
+            NewPoint.Speed = a;
         }
 
         [TestMethod]
@@ -38,8 +48,8 @@ namespace UnitTestDEV1._4
         public void BirdConstructorNotZeroCheck(float a)
         {
             Coordinate CurrentPoint = new Coordinate(15, 15, 15);
-            Bird NewPoint = new Bird(CurrentPoint, a);
-            float v = NewPoint.Speed;
+            Bird NewPoint = new Bird(CurrentPoint);
+            NewPoint.Speed = a;
         }
     }
     [TestClass]
